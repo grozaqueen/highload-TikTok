@@ -109,4 +109,3 @@ TikTok - сервис коротких видео
 4. https://ecommerce-platforms.com/ru/articles/tiktok-statistics
 5. https://inclient.ru/tiktok-stats
 6. https://domainator.by/schitaet-li-tiktok-vashi-sobstvennye-prosmotry
-7. https://affhub.media/pochti-polovina-lyudej-v-mire-ispolzuyut-tiktok-vmesto-google-dlya-poiska-informacii
