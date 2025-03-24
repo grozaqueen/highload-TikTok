@@ -167,7 +167,7 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 ![image](https://github.com/user-attachments/assets/645c8063-7837-4cfa-a7dc-b6b2b95de2df)
 
 ## 6. Физическая схема БД
-![image](https://github.com/user-attachments/assets/aa42fead-8ccd-4b25-a8d9-dc989cfae88e)
+![image](https://github.com/user-attachments/assets/fbe3d6cd-ba62-483d-a8f0-fa9cca794859)
 
 | Таблица | СУБД | Индексы | Денормализация | Шардирование | Резервирование |
 |------------|------------|------------|------------|------------|------------|
@@ -178,9 +178,9 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 | subscriptions | Apache Cassandra | user_id |  | по user_id | реплики |
 | subscribers | Apache Cassandra | user_id |  | по user_id | реплики |
 | video_for_search | Elastic Search | id, description, user_id |  | встроенное | snapshots |
-| videoParameters | KlickHouse | video_id |  | по video_id | мастер-репликация |
-| commentParameters | KlickHouse | comment_id |  | по comment_id | мастер-репликация |
-| subscribersParameters | KlickHouse | subscriber_id |  | по subscriber_id | мастер-репликация |
+| videoParameters | СlickHouse | video_id |  | по video_id | мастер-репликация |
+| commentParameters | СlickHouse | comment_id |  | по comment_id | мастер-репликация |
+| subscribersParameters | СlickHouse | subscriber_id |  | по subscriber_id | мастер-репликация |
 | events | Kafka | - |  |  |  |
 | videoActions | Apache Cassandra | user_id |  | по user_id | реплики |
 | video_storage_s3 | S3 |  |  |  | Бэкапы |
