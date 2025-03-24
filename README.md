@@ -183,8 +183,8 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 | subscribersParameters | СlickHouse | subscriber_id |  | по subscriber_id | мастер-репликация |
 | events | Kafka | - |  |  |  |
 | videoActions | Apache Cassandra | user_id |  | по user_id | реплики |
-| video_storage_s3 | S3 |  |  |  | Бэкапы |
-| image_storage_s3 | S3 |  |  |  | Бэкапы |
+| video_storage_s3 | amazon S3 |  |  |  | Бэкапы |
+| image_storage_s3 | amazon S3 |  |  |  | Бэкапы |
 
 ## Источники
 1. https://www.demandsage.com/tiktok-user-statistics
