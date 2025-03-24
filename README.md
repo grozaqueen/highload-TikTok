@@ -166,6 +166,25 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 ## 5. Логическая схема БД
 ![image](https://github.com/user-attachments/assets/645c8063-7837-4cfa-a7dc-b6b2b95de2df)
 
+## 6. Физическая схема БД
+
+| Таблица | СУБД | Индексы | Денормализация | Шардирование | Резервирование |
+|------------|------------|------------|------------|------------|------------|
+| sessions | Redis |  |  |  |  |
+| user |  |  |  |  |  |
+| video |  |  |  |  |  |
+| comment |  |  |  |  |  |
+| subscriptions |  |  |  |  |  |
+| subscribers |  |  |  |  |  |
+| video_for_search | Elastic Search | id, description, user_id |  | встроенное | snapshots |
+| videoParameters | KlickHouse | video_id |  | по video_id | мастер-репликация |
+| commentParameters | KlickHouse | comment_id |  | по comment_id | мастер-репликация |
+| subscribersParameters | KlickHouse | subscriber_id |  | по subscriber_id | мастер-репликация |
+| events | Kafka |  |  |  |  |
+| videoActions |  |  |  |  |  |
+| video_storage_s3 | S3 |  |  |  | Бэкапы |
+| image_storage_s3 | S3 |  |  |  | Бэкапы |
+
 ## Источники
 1. https://www.demandsage.com/tiktok-user-statistics
 2. https://fliki.ai/blog/tiktok-video-size
