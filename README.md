@@ -164,10 +164,10 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 Используем session tickets для уменьшения количества полных обменов ключами, что снижает нагрузку на CPU. В среднем 4,7% запросов направляется на один дц, при этом в регионе работает 4 дц в среднем. При пиковом трафике 2,8 млн RPS на 1 дц приходится 131k RPS. С учетом Session Tickets, 60% запросов обходят полноценное SSL-рукопожатие, а 40% (53000 RPS) требуют 2 round-trip'а. При средней задержке 2 мс: 2 мс × 53000 = 105 секунд процессорного времени в секунду на один дц. 
 
 ## 5. Логическая схема БД
-![image](https://github.com/user-attachments/assets/c7d6d2ea-7b42-4df7-9e57-37365384974c)
+![image](https://github.com/user-attachments/assets/d7eda002-528b-4f1a-a451-f8fe312dbe53)
 
 ## 6. Физическая схема БД
-![image](https://github.com/user-attachments/assets/f97f1d41-3e9f-4224-a7e0-82f7b61a8484)
+![image](https://github.com/user-attachments/assets/a97df606-f52e-4837-80d8-e1e9143f1547)
 
 | Таблица | СУБД | Индексы  | Шардирование | Резервирование |
 |------------|------------|------------|------------|------------|
@@ -178,11 +178,13 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 | subscriptions | Apache Cassandra | user_id | по user_id | реплики |
 | subscribers | Apache Cassandra | user_id | по user_id | реплики |
 | video_for_search | Elastic Search | id, description, user_id | встроенное | snapshots |
+| user_for_search | Elastic Search | id, description, username | встроенное | snapshots |
 | videoParameters | СlickHouse | video_id | по video_id | мастер-репликация |
 | commentParameters | СlickHouse | comment_id | по comment_id | мастер-репликация |
 | subscribersParameters | СlickHouse | subscriber_id | по subscriber_id | мастер-репликация |
 | events | Kafka | - |  |  |
 | videoActions | Apache Cassandra | user_id | по user_id | реплики |
+| itemActions | Postgres | contentId | по сreated_at | мастер-репликация |
 | video_storage_s3 | amazon S3 |  |  | Бэкапы |
 | image_storage_s3 | amazon S3 |  |  | Бэкапы |
 
