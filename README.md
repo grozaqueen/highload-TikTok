@@ -183,7 +183,7 @@ Service Discovery Kubernetes постоянно мониторит состоя�
 | commentParameters | СlickHouse | comment_id | по comment_id | мастер-репликация |
 | subscribersParameters | СlickHouse | subscriber_id | по subscriber_id | мастер-репликация |
 | events | Kafka | - |  |  |
-| videoActions | Apache Cassandra | user_id | по user_id | реплики |
+| userActions | Apache Cassandra | user_id | по user_id | реплики |
 | itemActions | Postgres | contentId | по сreated_at | мастер-репликация |
 | video_storage_s3 | amazon S3 |  |  | Бэкапы |
 | image_storage_s3 | amazon S3 |  |  | Бэкапы |
