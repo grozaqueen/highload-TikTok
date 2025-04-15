@@ -491,6 +491,10 @@ Rnorm = log(1 + R)
 
 ---
 
+## 9. Схема проекта
+
+![image](https://github.com/user-attachments/assets/2be63b77-c059-4ad2-9e08-1c2f3a8408a1)
+
 ## Источники
 1. https://www.demandsage.com/tiktok-user-statistics
 2. https://fliki.ai/blog/tiktok-video-size
