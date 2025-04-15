@@ -493,7 +493,7 @@ Rnorm = log(1 + R)
 
 ## 9. Схема проекта
 
-![image](https://github.com/user-attachments/assets/2be63b77-c059-4ad2-9e08-1c2f3a8408a1)
+![image](https://github.com/user-attachments/assets/eecab56b-1d77-461d-95a9-258173748549)
 
 ## Источники
 1. https://www.demandsage.com/tiktok-user-statistics
