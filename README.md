@@ -492,8 +492,7 @@ Rnorm = log(1 + R)
 ---
 
 ## 9. Схема проекта
-
-![image](https://github.com/user-attachments/assets/eecab56b-1d77-461d-95a9-258173748549)
+![image](https://github.com/user-attachments/assets/34e15331-ba11-4dfb-8d46-54637dc47b35)
 
 ## 10. Обеспечение надежности
 
